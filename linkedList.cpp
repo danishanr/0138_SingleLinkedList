@@ -74,6 +74,16 @@ public :
             *previous = *current;
             *current = (*current)->next;
         }
+        return (*current != NULL);
+        
+    }
+    bool delNote(int nim)
+    {
+        Node *current, *previous;
+        if (!Search(nim, &previous, &current))
+        {
+            return false;
+        }
         
     }
 };
