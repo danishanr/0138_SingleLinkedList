@@ -57,14 +57,15 @@ public :
 
         nodeBaru->next = current;
         previous->next = nodeBaru;
-            
-        
+             
     }
+
     bool listEmpty()
     {
         return (START == NULL);
 
     }
+    
     bool Search(int nim, Node **previous, Node **current)
     {
         *previous = START;
@@ -75,9 +76,9 @@ public :
             *previous = *current;
             *current = (*current)->next;
         }
-        return (*current != NULL);
-        
+        return (*current != NULL);    
     }
+
     bool delNote(int nim)
     {
         Node *current, *previous;
@@ -91,9 +92,7 @@ public :
             previous->next = current-> next;
 
         delete current;
-        return true;
-
-        
+        return true;  
     }
     void traverse()
     {
@@ -110,11 +109,8 @@ public :
                 cout << currentNode->noMhs << endl;
                 currentNode = currentNode->next;
             }
-            cout << endl;
-            
-        }
-        
-        
+            cout << endl;   
+        }  
     }
 };
 
