@@ -45,11 +45,18 @@ public :
 
         while ((current != NULL) && (nim<= current->noMhs))
         {
-            /* code */
+            if (nim == current->noMhs)
+            {
+                cout << "\nDuplikasi noMhs tidak dijalankan\n";
+                return;
+            }
+            previous = current;
+            current = current->next; 
         }
+
+        nodeBaru->next = current;
+        previous->next = nodeBaru;
             
-            
-        
         
     }
 };
